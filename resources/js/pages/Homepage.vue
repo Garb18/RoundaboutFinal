@@ -30,7 +30,7 @@
             <v-card-text>
               <v-row align="center" class="mx-0">
                 <v-rating
-                  :value="product.rating"
+                  :value="parseFloat(product.rating)"
                   color="amber"
                   dense
                   half-increments
@@ -38,10 +38,15 @@
                   size="14"
                 ></v-rating>
 
-                <div class="ml-4 white--text">{{ product.rating }} (413)</div>
+                <div class="ml-4 white--text">
+                  {{ product.rating }} ({{ parseInt(product.ratingAmount) }})
+                </div>
               </v-row>
 
-              <div class="my-4 subtitle-1 white--text">$ • Italian, Cafe</div>
+              <div class="my-4 subtitle-1 white--text">
+                {{ product.costly }} • {{ product.foodType }},
+                {{ product.venueType }}
+              </div>
 
               <div class="white--text">
                 {{ product.description }}
