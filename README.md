@@ -8,5 +8,5 @@
 - Optional - Included an sql dump if you would rather use that
 - Run `npm install`
 - Run `npm run watch`
-- In a seperate terminal window: Run `php artisan servce`
+- In a seperate terminal window: Run `php artisan serve`
 - That's it: launch the main URL. 
